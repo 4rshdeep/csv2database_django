@@ -36,8 +36,8 @@ def csvimport(file):
     #path which has forward slashes
     #and system I am using is windows
     #and it's directory uses backward slash
-
-    fpath = fpath.replace('/','\\')
+    if(BASE_DIR.find('\\')==1):
+        fpath = fpath.replace('/','\\')
     #REMOVE ABOVE LINE IF YOU ARE WORKING IN LINUX
 
     path = BASE_DIR + fpath
